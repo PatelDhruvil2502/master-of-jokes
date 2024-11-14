@@ -1,0 +1,7 @@
+{% extends "base.html" %} {% block content %}
+<h2>{{ joke.title }}</h2>
+<p>{{ joke.body }}</p>
+
+<a href="{{ url_for('jokes.my_jokes') }}">Back to My Jokes</a>
+
+{% endblock %}

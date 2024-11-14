@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block content %}
+<h2>Leave a Joke</h2>
+<form method="post">
+  <input type="text" name="title" placeholder="Joke Title" required /><br />
+  <textarea name="body" placeholder="Joke Body" required></textarea><br />
+  <button type="submit">Submit Joke</button>
+</form>
+
+<p>Your current joke balance: {{ joke_balance }}</p>
+{% endblock %}

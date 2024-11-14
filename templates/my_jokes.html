@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block content %}
+<h2>My Jokes</h2>
+
+<ul>
+  {% for joke in jokes %}
+  <li>
+    <a href="{{ url_for('jokes.view_joke', joke_id=joke.id) }}"
+      >{{ joke.title }}</a
+    >
+  </li>
+  {% endfor %}
+</ul>
+
+<p>Your current joke balance: {{ joke_balance }}</p>
+{% endblock %}
